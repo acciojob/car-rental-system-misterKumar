@@ -29,12 +29,17 @@ public class Car {
 
  public void setAvailable(boolean available) {
 	//your code goes here
-     isAvailable = available;
+     this.isAvailable = available;
  }
 
  public static int getAvailableCars(Car[] cars) {
 	//your code goes here
 	 int count = 0;
+     for (Car car : cars) {
+         if (car.isAvailable()) {
+             count++;
+         }
+     }
      return count;
  }
 }
